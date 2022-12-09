@@ -1,0 +1,6 @@
+GET http://localhost:3000/restaurants.json
+
+{
+  "cache-control": "no-cache, private",
+  "content-type": "application/json"
+}
