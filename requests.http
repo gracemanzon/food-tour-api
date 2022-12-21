@@ -1,4 +1,4 @@
-GET http://localhost:3000/restaurants.json
+GET http://localhost:3000/locations.json?location=Philadelphia
 
 {
   "cache-control": "no-cache, private",

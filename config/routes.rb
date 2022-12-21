@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get "/restaurants" => "restaurants#index"
+  get "/locations" => "locations#index"
 end
