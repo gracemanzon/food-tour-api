@@ -18,7 +18,11 @@ class LocationsController < ApplicationController
     request["X-RapidAPI-Host"] = "worldwide-restaurants.p.rapidapi.com"
     request.body = "q=#{location}&language=en_US"
 
-    response = http.request(request).read_body.as_json
-    render json: response
+    response = http.request(request).read_body
+    parsed_response = JSON.parse(response)
+    location_id = parsed_response["results"]["data"][0]["result_object"]["location_id"]
+    # binding.pry
+    # redirect_to restaurants_path(location_id: location_id)
+    # render json: parsed_response
   end
 end
